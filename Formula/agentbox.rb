@@ -1,0 +1,27 @@
+class Agentbox < Formula
+  desc "Run AI coding agents in isolated Apple Containers"
+  homepage "https://github.com/Rag0n/agentbox"
+  version "0.1.0"
+  url "https://github.com/Rag0n/agentbox/releases/download/v0.1.0/agentbox-darwin-arm64.tar.gz"
+  sha256 "2143136231fff72c45419ea3f1ebf00076a91dfdaad741166d96f7b06a8b2893"
+  license "GPL-3.0-only"
+
+  depends_on arch: :arm64
+  depends_on macos: ">= :tahoe"
+
+  def install
+    bin.install "agentbox"
+  end
+
+  def caveats
+    <<~EOS
+      agentbox requires the Apple Container CLI, which is not available
+      via Homebrew. Install it from:
+        https://github.com/apple/container/releases
+    EOS
+  end
+
+  test do
+    assert_match "agentbox", shell_output("#{bin}/agentbox --version")
+  end
+end
