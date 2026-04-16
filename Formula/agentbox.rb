@@ -1,9 +1,9 @@
 class Agentbox < Formula
   desc "Run AI coding agents in isolated Apple Containers"
   homepage "https://github.com/Rag0n/agentbox"
-  url "https://github.com/Rag0n/agentbox/releases/download/v0.1.0/agentbox-darwin-arm64.tar.gz"
-  version "0.1.0"
-  sha256 "2143136231fff72c45419ea3f1ebf00076a91dfdaad741166d96f7b06a8b2893"
+  url "https://github.com/Rag0n/agentbox/releases/download/v0.2.0/agentbox-darwin-arm64.tar.gz"
+  version "0.2.0"
+  sha256 "b407c2400f1bcd971a447dc530be86f4bd96527d5e34b916ea434ac64031ccfe"
   license "GPL-3.0-only"
 
   depends_on arch: :arm64
