@@ -6,8 +6,8 @@ class Agentbox < Formula
   sha256 "2143136231fff72c45419ea3f1ebf00076a91dfdaad741166d96f7b06a8b2893"
   license "GPL-3.0-only"
 
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
   def install
     bin.install "agentbox"
