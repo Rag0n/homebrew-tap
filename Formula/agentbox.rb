@@ -7,7 +7,6 @@ class Agentbox < Formula
   license "GPL-3.0-only"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :tahoe"
 
   def install
     bin.install "agentbox"
@@ -15,8 +14,8 @@ class Agentbox < Formula
 
   def caveats
     <<~EOS
-      agentbox requires the Apple Container CLI, which is not available
-      via Homebrew. Install it from:
+      agentbox requires macOS 26 (Tahoe) or later and the Apple Container
+      CLI, which is not available via Homebrew. Install it from:
         https://github.com/apple/container/releases
     EOS
   end
